@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -8,4 +5,50 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+model chambre {
+  id_chambre      Int           @id @default(autoincrement())
+  id_type_chambre Int?
+  id_type_lit     Int?
+  nbr_type_lit    Int?          @db.SmallInt
+  type_chambre    type_chambre? @relation(fields: [id_type_chambre], references: [id_type_chambre], onDelete: NoAction, onUpdate: NoAction)
+  type_lit        type_lit?     @relation(fields: [id_type_lit], references: [id_type_lit], onDelete: NoAction, onUpdate: NoAction)
+  reservation     reservation[]
+}
+
+model reservation {
+  id_reservation           Int       @default(autoincrement())
+  id_chambre               Int
+  nombre_personnes_chambre Int?      @db.SmallInt
+  nom                      String?   @db.VarChar(50)
+  prenom                   String?   @db.VarChar(50)
+  adresse_1                String?   @db.VarChar(100)
+  adresse_2                String?   @db.VarChar(100)
+  adresse_3                String?   @db.VarChar(100)
+  code_postal              Int?
+  ville                    String?   @db.VarChar(80)
+  telephone                Int?
+  entreprise               String?   @db.VarChar(80)
+  mail                     String?   @db.VarChar(124)
+  cout                     Float?
+  date_debut               DateTime? @db.Date
+  date_fin                 DateTime? @db.Date
+  est_reserve              Boolean?
+  chambre                  chambre   @relation(fields: [id_chambre], references: [id_chambre], onDelete: NoAction, onUpdate: NoAction)
+
+  @@id([id_reservation, id_chambre])
+}
+
+model type_chambre {
+  id_type_chambre Int       @id @default(autoincrement())
+  nom             String?   @db.VarChar(30)
+  chambre         chambre[]
+}
+
+model type_lit {
+  id_type_lit      Int       @id @default(autoincrement())
+  nom              String?   @db.VarChar(30)
+  nombre_personnes Int?      @db.SmallInt
+  chambre          chambre[]
 }
