@@ -12,6 +12,9 @@ module.exports = {
       "brown-light": "#5b4012",
       "floral-white": "#fffaf0",
     },
+    fontFamily: {
+      sans: ["Raleway", "sans-serif"]
+    },
     extend: {},
   },
   plugins: [],
