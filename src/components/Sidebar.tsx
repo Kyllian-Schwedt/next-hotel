@@ -6,19 +6,19 @@ export default function Sidebar() {
                     <li className="nav-item">
                         <a className="nav-link active" aria-current="page" href="#">
                             <span data-feather="home"></span>
-                            Dashboard
+                            Accueil
                         </a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="#">
                             <span data-feather="file"></span>
-                            Orders
+                            Chambres
                         </a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="#">
                             <span data-feather="shopping-cart"></span>
-                            Products
+                            Services
                         </a>
                     </li>
                 </ul>

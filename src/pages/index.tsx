@@ -6,6 +6,7 @@ import Sidebar from '@/components/Sidebar'
 import { useEffect } from 'react';
 import HomeCarousel from '@/components/HomeCarousel'
 import Footer from '@/components/footer'
+import SearchForm from '@/components/SearchForm'
 
 const inter = Raleway({ subsets: ['latin'] })
 
@@ -20,7 +21,7 @@ export default function Home() {
       </Head>
 
         <header className="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-            <a className="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Company name</a>
+            <a className="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Next Hotel</a>
             <button className="navbar-toggler position-absolute d-md-none collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -33,6 +34,7 @@ export default function Home() {
                 <Sidebar />
                 <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                     <HomeCarousel />
+                    <SearchForm />
                     <Footer/>
                 </main>
             </div>
