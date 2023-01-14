@@ -18,6 +18,12 @@
   font-family: var(--font-mono);
 }
 
+.carousel_img img {
+  height: 100vh;
+  width: auto;
+  object-fit: cover;
+}
+
 .description a {
   display: flex;
   justify-content: center;
