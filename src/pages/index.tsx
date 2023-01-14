@@ -30,12 +30,12 @@ export default function Home() {
         </header>
 
         <div className="container-fluid">
-            <div className="row">
+            <div className="row px-0">
                 <Sidebar />
-                <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <main className="col-md-9 ms-sm-auto col-lg-10">
                     <HomeCarousel />
-                    <SearchForm />
-                    <Footer/>
+                    <div className="d-flex justify-content-center m-5"><SearchForm /></div>
+                    <Footer />
                 </main>
             </div>
         </div>
