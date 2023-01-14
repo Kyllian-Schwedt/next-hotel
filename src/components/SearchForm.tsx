@@ -26,7 +26,7 @@ export default function SearchForm() {
 						    options={{minDate: date, defaultDate: date, dateFormat: "d/m/Y"}}
 						    render={
 							   ({defaultValue, value, ...props}, ref) => {
-								   return <CustomInput defaultValue={defaultValue} inputRef={ref} />
+								   return <CustomInput defaultValue={defaultValue} inputRef={ref} value={undefined} />
 							   }
 						    }
 						/>
@@ -41,7 +41,7 @@ export default function SearchForm() {
 							options={{minDate: min_date, defaultDate: date, dateFormat: "d/m/Y"}}
 							render={
 								({defaultValue, value, ...props}, ref) => {
-									return <CustomInput defaultValue={defaultValue} inputRef={ref} />
+									return <CustomInput defaultValue={defaultValue} inputRef={ref} value={undefined} />
 								}
 							}
 						/>
@@ -57,6 +57,7 @@ export default function SearchForm() {
 	)
 }
 
+// @ts-ignore
 function CustomInput({ value, defaultValue, inputRef, ...props}) {
 	return (
 		<input {...props} value={value} defaultValue={defaultValue} ref={inputRef} type={"date"} className={"border-none" +
