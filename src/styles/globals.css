@@ -1,3 +1,10 @@
+.max-w-440 {
+    max-width: 440px;
+}
+
+.border-none {
+    border: none;
+}
 body {
     font-size: .875rem;
 }
