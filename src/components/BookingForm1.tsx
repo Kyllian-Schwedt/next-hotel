@@ -1,16 +1,59 @@
-import Image from "next/image";
 import {MouseEvent} from "react";
 
 export default function BookingForm1() {
 	return (
 		<>
-			<div className={"flex flex-column"}>
-				<div className={"row"}>
+			<div className={"flex flex-column"} id={"booking-1"}>
+				<h5 className={"text-center mb-2"}>Chambres disponibles</h5>
+				<div className={"row border-bottom border-top mb-2"}>
 					<div className={"col-3"}>
-						<Image src={""} alt={"Ceci est une image"}></Image>
+						<img src={"./images_chambres/white-bed-comforter-during-daytimne-90317.jpg"} alt={"Ceci est" +
+							" une image"} className={"pic"}></img>
 					</div>
 					<div className={"col-9"}>
 						<h6>Chambre double</h6>
+						<p>La plus belle vue de la région de Toulon vous attends pour passer de merveilleuses nuits.</p>
+						<u>Options disponibles</u>
+						<div className={"row"}>
+							<ul className={"col"}>
+								<li><b>Petit-déjeuner</b></li>
+								<li><b>Non-remboursable</b></li>
+							</ul>
+							<div className={"col"}>
+								<button type={"button"} className={"btn btn-primary"} id={"option1"} onClick={openInfos}>+</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div className={"row border-bottom mb-2"}>
+					<div className={"col-3"}>
+						<img src={"./images_chambres/hotel-room-1447201_1920.jpg"} alt={"Ceci est" +
+							" une image"} className={"pic"}></img>
+					</div>
+					<div className={"col-9"}>
+						<h6>Chambre triple</h6>
+						<p>La plus belle vue de la région de Toulon vous attends pour passer de merveilleuses nuits.</p>
+						<u>Options disponibles</u>
+						<div className={"row"}>
+							<ul className={"col"}>
+								<li><b>Petit-déjeuner</b></li>
+								<li><b>Non-remboursable</b></li>
+							</ul>
+							<div className={"col"}>
+								<button type={"button"} className={"btn btn-primary"} id={"option1"} onClick={openInfos}>+</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div className={"row border-bottom mb-2"}>
+					<div className={"col-3"}>
+						<img src={"./images_chambres/Meero-photo-85047785-014.jpg"} alt={"Ceci est" +
+							" une image"} className={"pic"}></img>
+					</div>
+					<div className={"col-9"}>
+						<h6>Chambre Quadruple</h6>
 						<p>La plus belle vue de la région de Toulon vous attends pour passer de merveilleuses nuits.</p>
 						<u>Options disponibles</u>
 						<div className={"row"}>
@@ -32,7 +75,7 @@ export default function BookingForm1() {
 							<p>Cette option comprend uniquement le petit-déjeuner.</p>
 						</div>
 						<div className={"col"}>
-							<button type={"button"} className={"btn btn-primary"}>Prix €</button>
+							<button type={"button"} className={"btn btn-primary"}>15 €</button>
 						</div>
 					</div>
 				</div>
@@ -41,11 +84,11 @@ export default function BookingForm1() {
 					<div className={"col"}>
 					</div>
 					<div className={"col"}>
-						<button className={"btn btn-danger"}>Partager</button>
+						<button className={"btn btn-outline-info"}>Partager</button>
 					</div>
 
 					<div className={"col"}>
-						<button type={"submit"} className={"btn btn-primary"}>Suivant -></button>
+						<a className={"btn btn-primary"} href={"#booking-2"}>Suivant</a>
 					</div>
 				</div>
 			</div>

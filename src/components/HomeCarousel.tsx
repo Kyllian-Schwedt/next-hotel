@@ -24,7 +24,7 @@ export default function HomeCarousel() {
                     <img src="/images_chambres/hotel-saint-vincent-double-superieure-1-3.jpg" className="d-block w-100" alt="..."></img>
                     <div className="container">
                         <div className="carousel-caption">
-                            <h1>Fammile tripple</h1>
+                            <h1>Famille triple</h1>
                             <p>Cette chambre familiale spacieuse dispose de lits confortables pour trois personnes, d'une télévision à écran plat et d'une salle de bain privée. Elle est idéale pour les familles en voyage d'affaires ou en vacances.</p>
                         </div>
                     </div>

@@ -1,7 +1,7 @@
 
-export default function form_part4() {
+export default function BookingForm4() {
     return (
-        <div className="container d-flex justify-content-center mt-5 mb-5">
+        <div id={"booking-4"} className="container d-flex justify-content-center mt-5 mb-5">
             <div className="row g-3">
                 <div className="col-md-6">
                     <span>Méthode de Paiement</span>
@@ -52,16 +52,7 @@ export default function form_part4() {
                                         </div>
                                         <div className="row mt-3 mb-3">
                                             <div className="col-md-4">
-                                                <a href="#" className="btn btn-secondary btn-lg active" role="button"
-                                                   aria-pressed="true">Retour</a>
-                                            </div>
-                                            <div className="col-md-4">
-                                                <a href="#" className="btn btn-danger btn-lg active" role="button"
-                                                   aria-pressed="true">Partager</a>
-                                            </div>
-                                            <div className="col-md-4">
-                                                <a href="#" className="btn btn-primary btn-lg active" role="button"
-                                                   aria-pressed="true">Finir</a>
+                                                <a href="#confirmation" className="btn btn-primary">Finir</a>
                                             </div>
                                         </div>
                                         <span className="text-muted certificate-text"><i className="fa fa-lock"></i> Votre transaction est sécurisée avec un certificat SSL</span>
@@ -80,7 +71,7 @@ export default function form_part4() {
                                 <a href="#" className="billing">Plus d'informations</a>
                             </div>
                             <div className="mt-1">
-                                <sup className="super-price">15.0€</sup>
+                                <sup className="super-price">15.00€</sup>
                                 <span className="super-month">/Nuit</span>
                             </div>
                         </div>
@@ -88,7 +79,7 @@ export default function form_part4() {
                         <div className="p-3">
                             <div className="d-flex justify-content-between mb-2">
                                 <span>TVA</span>
-                                <span>+3.0€</span>
+                                <span>+3.00€</span>
                             </div>
                             <div className="d-flex justify-content-between">
                                 <span>Vat <i className="fa fa-clock-o"></i></span>
@@ -100,9 +91,18 @@ export default function form_part4() {
                             <div className="d-flex flex-column">
                                 <span>Aujourd'hui, vous payez</span>
                             </div>
-                            <span>18.0€</span>
+                            <span>18.00€</span>
                         </div>
                     </div>
+                </div>
+                <div className={"row mt-4"}>
+                    <div className="col">
+                        <a href="#booking-3" className="btn btn-secondary">Retour</a>
+                    </div>
+                    <div className="col">
+                        <a href="#" className="btn btn-outline-info">Partager</a>
+                    </div>
+                    <div className={"col"}></div>
                 </div>
             </div>
         </div>

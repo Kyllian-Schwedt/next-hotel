@@ -113,3 +113,15 @@ body {
 .display {
     display: block;
 }
+
+.bg-form {
+    background-image: url('../../public/images_chambres/rhul-chambres.jpg');
+}
+
+.pic {
+    width: 100%;
+}
+
+.vertical-align {
+    vertical-align: middle;
+}
